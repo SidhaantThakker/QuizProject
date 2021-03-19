@@ -1,0 +1,21 @@
+Topic: Quizzing Web App
+
+Use: This app is intended for use as a game. It simulates a question answer session between a quizmaster and participant.
+
+Languages Used:  HTML, CSS, JavaScript
+
+Implementation:
+1. Each question along with its associated options, correct answer, and some metadata will be stored as 
+an object in an array stored in the local storage for now using JSON.
+2. At the end, the final score will be displayed.
+
+Optional Features (if time permits):
+1. A global highscore board that stores a user-entered nickname and their score
+2. Storing the answers in a back end script to prevent cheating
+
+Future Updates: 
+
+1. Ability to use the app as a template to make your own quizzes, and the interface to make it possible.
+2. Ability to submit your own quiz questions to add to the global pool.
+
+
