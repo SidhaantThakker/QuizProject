@@ -9,11 +9,12 @@ function displayData(){
 }
 displayData();
 
-qArr = JSON.parse(localStorage.getItem("questions"))
+qArr = JSON.parse(localStorage.getItem("questions"));
 
-qArr = qArr.sort(() => Math.random() - 0.5)
+qArr = qArr.sort(() => Math.random() - 0.5);
 
-dispArea = document.getElementById("qbox")
+dispArea = document.getElementById("qbox");
+
 for(let i = 0; i<qArr.length; i++){
     qArr[i].options = qArr[i].options.sort(() => Math.random() - 0.5)
     dispArea.innerHTML += `

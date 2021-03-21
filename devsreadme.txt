@@ -1,0 +1,1 @@
+quiz.html and quiz.js are deprecated, do not use them for building, instead use fancyquiz.html and fancyquiz.js
