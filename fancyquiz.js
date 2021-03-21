@@ -8,18 +8,26 @@ function displayData(){
 }
 displayData();
 
-//
+//Getting questions from localStorage
 
 qArr = JSON.parse(localStorage.getItem("questions"));
 
+//Randomizing Array Elements
 qArr = qArr.sort(() => Math.random() - 0.5);
 
+//Getting the question box HTML element
 dispArea = document.getElementById("qbox");
 
+//variable i will hold the index of the current question
 let i = 0;
 
+/* Array arrSel will contain the selected option for a question and the question ID of the question so that we can verify it later */
 let arrSel = [];
 
+/*
+The nextQuestion function renders the HTML for the given question, diplaying a re-initialized timer, 
+the question text, the options, the clear button and the next question button
+*/
 function nextQuestion(){
     qArr[i].options = qArr[i].options.sort(() => Math.random() - 0.5);
     dispArea.innerHTML = `
@@ -47,6 +55,9 @@ function nextQuestion(){
 }
 nextQuestion();
 
+
+/* The clearOptions function is triggered when the Clear button is clicked 
+and will clear selected options for the given question */
 function clearOptions(){
     console.log("clearing");
     optsToClear = document.getElementsByName(`q${qArr[i].id}`);
@@ -55,8 +66,10 @@ function clearOptions(){
     }
 }
 
+/* The checkOptions function is triggered when the Next button is clicked and will submit the selected option (if any) and will move to the next question */
 function checkOptions(){
     if(i == qArr.length-1){
+        //Entered if this is the last question to be checked, will trigger the checkScore function 
         opts = document.getElementsByName(`q${qArr[i].id}`);
         for(let j=0;j<opts.length;j++){
             if(opts[j].checked){
@@ -67,6 +80,7 @@ function checkOptions(){
         }
         checkScore();
     } else {
+        //Entered if more questions are left, will move to the next question by incrementing i
         opts = document.getElementsByName(`q${qArr[i].id}`)
         for(let j=0;j<opts.length;j++){
             if(opts[j].checked){
@@ -81,6 +95,8 @@ function checkOptions(){
     
 
 }
+
+/* The checkScore fucntion will calculkate the total score of the player based on the options selected and stored in the arrSel array*/
 
 function checkScore(){
     let k = 0;
@@ -102,7 +118,7 @@ function checkScore(){
     window.location.href = "./results.html";
 }
 
-
+/* The timer fucntion initializes a new timer for each  question and displays it on the HTML */
 function quizTimer(i){
     let t = 5;
     let tr = setInterval(function(){
