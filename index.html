@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Quiz!</title>
 </head>
 <body>
-    <!-- Header -->
-    <div class="head">
-        <h1>
-            Welcome to the Quiz App!
-        </h1>
+    <div class="card">
+        <!-- Header -->
+        <div class="head">
+            <h1>
+                Welcome to the Quiz App!
+            </h1>
+        </div>
+        <!-- Body -->
+        <!-- This page asks the use for a nickname that they will be referred to with throughout the quiz, the name is taken as input here and stored in localStorage -->
+        <div class="form">
+            <form onsubmit="storeDetails(event)">
+                <div class="cardin">
+                    <label for="nick">Enter Nickname</label>
+                    <input type="text" name="nick" id="nick">
+                    <button type="submit">Enter</button>
+                </div>
+            </form>
+        </div>
+        <!-- Footer -->
+        <!-- Scripts -->
     </div>
-    <!-- Body -->
-    <!-- This page asks the use for a nickname that they will be referred to with throughout the quiz, the name is taken as input here and stored in localStorage -->
-    <div>
-        <form onsubmit="storeDetails(event)">
-            <div>
-                <label for="nick">Enter Nickname</label>
-                <input type="text" name="nick" id="nick">
-            </div>
-            <button type="submit">Enter</button>
-        </form>
-    </div>
-    <!-- Footer -->
-    <!-- Scripts -->
     <script src="index.js"></script>
 </body>
 </html>

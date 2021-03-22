@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+:root {
+    --titlecol: #222222;
+    --bgcol: #4F646F;
+    --divcol: #B7ADCF;
+    --inputcol: #DEE7E7;
+    --buttoncol: #DEE7E7;
+}
+
+
+*{
+    font-size: 5vh;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--titlecol);
+}
+
+body{
+    background-color: var(--bgcol);
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.timer{
+    text-align: center;
+    font-size: 7vh;
+    margin-top:2%;
+    margin-bottom: 5%;
+}
+
+input{
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+label{
+    font-size: 4vh;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonbox{
+    display: flex;
+    justify-content: center;
+}
+
+.data{
+    margin-top:2%;
+    font-size: 10vh;
+}
+
+.option{
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--buttoncol);
+    font-size: 5vh;
+    width: 25vw;
+    margin: 1%;
+}
+
+.questiontext{
+    text-align: center;
+    background-color: var(--divcol);
+    padding: 5vh;
+    max-width: 60vw;
+    border-radius: 50px;
+}
+
+.optioncard{
+    margin-top: 5%;
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selected{
+    background-color: var(--bgcol);
+}
+
+button{
+    margin-right: 1%;
+    margin-left: 1%;
+    border: none;
+    font-size: 100%;
+    height: 6vw;
+    border-radius: 30px;
+    width: 20vw;
+    background-color: var(--buttoncol);
+}
+
+
+.thetext{
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) and (orientation:portrait){
+    .data{
+        font-size: 5vh;
+        margin-top: 2vh;
+        word-wrap: normal;
+        text-align: center;
+    }
+    .timer{
+        font-size: 5vh;
+    }
+    .optioncard{
+        display: flex;
+        width: 70vw;
+
+    }
+    .option{
+        margin-top: 1vh;
+        width: 60vw;
+    }
+    .questiontext{
+        text-align: center;
+        background-color: var(--divcol);
+        padding: 5vh;
+        border-radius: 50px;
+        max-width: 70vw;
+        width: 70vw;
+    }
+    .optioncard{
+        margin-top: 0;
+    }
+    .thetext{
+        font-size: 4vh;
+    }
+    button{
+        width: 40vw;
+        height: 8vh;
+    }
+}

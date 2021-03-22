@@ -11,10 +11,9 @@ displayData();
 //Getting questions from localStorage
 
 qArr = JSON.parse(localStorage.getItem("questions"));
-
 //Randomizing Array Elements
 qArr = qArr.sort(() => Math.random() - 0.5);
-
+qArr = qArr.slice(0,5);
 //Getting the question box HTML element
 dispArea = document.getElementById("qbox");
 
@@ -31,26 +30,39 @@ the question text, the options, the clear button and the next question button
 function nextQuestion(){
     qArr[i].options = qArr[i].options.sort(() => Math.random() - 0.5);
     dispArea.innerHTML = `
-    <div id="timer${i}">
+    <div class="timer" id="timer${i}">
         00:5
     </div>
-    <div>
-        ${i+1}. ${qArr[i].question}
+    <div class="questiontext">
+        <div class="thetext">${i+1}. ${qArr[i].question}</div>
         <br>
-        <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[0]}" value="${qArr[i].options[0]}">
-        <label for="${qArr[i].id}${qArr[i].options[0]}">${qArr[i].options[0]}</label>
-        <br>
-        <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[1]}" value="${qArr[i].options[1]}">
-        <label for="${qArr[i].id}${qArr[i].options[1]}">${qArr[i].options[1]}</label>
-        <br>
-        <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[2]}" value="${qArr[i].options[2]}">
-        <label for="${qArr[i].id}${qArr[i].options[2]}">${qArr[i].options[2]}</label>
-        <br>
-        <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[3]}" value="${qArr[i].options[3]}">
-        <label for="${qArr[i].id}${qArr[i].options[3]}">${qArr[i].options[3]}</label>
+        <div class="optioncard">
+            <div class="option option1" onclick="selectDiv(0)">
+                <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[0]}" value="${qArr[i].options[0]}">
+                <label for="${qArr[i].id}${qArr[i].options[0]}">${qArr[i].options[0]}</label>
+            </div>
+
+            <div class="option option2" onclick="selectDiv(1)">
+                <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[1]}" value="${qArr[i].options[1]}">
+                <label for="${qArr[i].id}${qArr[i].options[1]}">${qArr[i].options[1]}</label>
+            </div>
+
+            <div class="option option3" onclick="selectDiv(2)">
+                <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[2]}" value="${qArr[i].options[2]}">
+                <label for="${qArr[i].id}${qArr[i].options[2]}">${qArr[i].options[2]}</label>
+            </div>
+
+            <div class="option option4" onclick="selectDiv(3)">
+                <input type="radio" name="q${qArr[i].id}" id="${qArr[i].id}${qArr[i].options[3]}" value="${qArr[i].options[3]}">
+                <label for="${qArr[i].id}${qArr[i].options[3]}">${qArr[i].options[3]}</label>
+            </div>
+        </div>
     </div> 
-    `+`<br>`+`<button onclick="clearOptions()">Clear</button>
-    <button onclick="checkOptions()">Next!</button>`;
+    `+`<br>`+
+    `<div class="buttonbox">
+    <button onclick="clearOptions()">Clear</button>
+    <button onclick="checkOptions()">Next!</button>
+    </div>`;
     quizTimer(i);
 }
 nextQuestion();
@@ -62,6 +74,7 @@ function clearOptions(){
     console.log("clearing");
     optsToClear = document.getElementsByName(`q${qArr[i].id}`);
     for(let j = 0; j < optsToClear.length; j++){
+        optdivs[j].classList.remove("selected");
         optsToClear[j].checked = false;;
     }
 }
@@ -120,7 +133,7 @@ function checkScore(){
 
 /* The timer fucntion initializes a new timer for each  question and displays it on the HTML */
 function quizTimer(i){
-    let t = 5;
+    let t = 3000000000;
     let tr = setInterval(function(){
         try{
             document.getElementById(`timer${i}`).innerHTML='00:'+t;
@@ -136,4 +149,20 @@ function quizTimer(i){
             clearInterval(tr);
         }
     }, 1000);
+}
+
+
+function selectDiv(x){
+    optdivs = document.getElementsByClassName("option");
+
+    
+    for(let j=0;j<optdivs.length;j++){
+        optdivs[j].classList.remove("selected");
+        document.getElementById(`${qArr[i].id}${qArr[i].options[j]}`).checked = false;
+        if(j==x){
+            optdivs[j].classList.add("selected");
+        }
+    }
+    optselect = document.getElementById(`${qArr[i].id}${qArr[i].options[x]}`);
+    optselect.checked = true;
 }
