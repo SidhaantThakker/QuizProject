@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  color: #eee;
+  background: linear-gradient(to top left, #283db4, #151d61);
+  /* background-color: #60b347; */
+}
+
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  margin: 50px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  margin: 50px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Question {
+  background: #eee;
+  color: #333;
+  font-size: 3rem;
+  width: 80%;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  font-size: 2rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.start {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  margin: 50px;
+  width: 200px;
+}
+
+.check {
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
