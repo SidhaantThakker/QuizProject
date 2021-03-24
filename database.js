@@ -22,7 +22,7 @@ let q9 = new Question("Which country is the Bolshoi Theatre located in?",["Ukrai
 let q10 = new Question("Which is the most sold game in the world?",["Minecraft","Halo","Tetris","Counter-Strike"],"Tetris",9);
 let q11 = new Question("Which country did Alexander the Great hail from?",["Macedonia","Greece","Rome","Scythia"],"Macedonia",10);
 let q12 = new Question("What is the financial capital of India?",["Mumbai","Bangalore","Kolkata","Chandigarh"],"Mumbai",11);
-let q13 = new Question("What is the name of the empire established by Cyrus the Great?",["Mesopotamian","Egypy","Mali","Achaemenid"],"Achaemenid",12);
+let q13 = new Question("What is the name of the empire established by Cyrus the Great?",["Mesopotamian","Egypt","Mali","Achaemenid"],"Achaemenid",12);
 let q14 = new Question("Who was the bassist of Queen?",["Flea","Deacon","Taylor","Bonamassa"],"Deacon",13);
 let q15 = new Question("Which college is the best?",["BITS Goa","BITS Goa","BITS Goa","BITS Goa"],"BITS Goa",14);
 

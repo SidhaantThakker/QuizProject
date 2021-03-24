@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
-
 :root {
     --titlecol: #222222;
     --bgcol: #4F646F;
@@ -9,25 +8,47 @@
     --buttoncol: #DEE7E7;
 }
 
+
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     font-family: 'Raleway', sans-serif;
+    color: var(--titlecol)
 }
 
 body{
-    height:100vh;
-    font-size: 7vh;
     background-color: var(--bgcol);
-    color: var(--titlecol);
-}
-
-.card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 75%;
+}
+
+.maincard{
+    margin-top: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--divcol);
+    width: 80vw;
+}
+
+h1{
+    margin-bottom: 3vh;
+}
+
+table{
+    width: 70vw;
+    border-collapse: collapse;
+}
+
+th, td{
+    text-align: center;
+    border: 1px solid; 
+    font-size: 3vh;
+
 }
 
 button{
@@ -36,15 +57,7 @@ button{
     border: none;
     height: 7.5vh;
     margin-top: 3vh;
-    width: 15vw;
+    width: 20vw;
     font-size: 3vh;
 }
 
-@media only screen and (max-width: 768px) and (orientation:portrait){
-    .card{
-        text-align: center;
-    }
-    button{
-        width: 50vw;
-    }
-}
