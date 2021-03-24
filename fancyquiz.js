@@ -31,7 +31,7 @@ function nextQuestion(){
     qArr[i].options = qArr[i].options.sort(() => Math.random() - 0.5);
     dispArea.innerHTML = `
     <div class="timer" id="timer${i}">
-        00:5
+        0:15
     </div>
     <div class="questiontext">
         <div class="thetext">${i+1}. ${qArr[i].question}</div>
@@ -133,10 +133,15 @@ function checkScore(){
 
 /* The timer fucntion initializes a new timer for each  question and displays it on the HTML */
 function quizTimer(i){
-    let t = 3000000000;
+    let t = 15;
     let tr = setInterval(function(){
         try{
-            document.getElementById(`timer${i}`).innerHTML='00:'+t;
+            if(t>9){
+                document.getElementById(`timer${i}`).innerHTML='0:'+t;
+            }
+            else{
+                document.getElementById(`timer${i}`).innerHTML='0:0'+t;
+            }
             if(t==0){
                 checkOptions();
             }
