@@ -81,5 +81,6 @@ function saveScore(){
     }
     document.getElementById("scoresaver").innerHTML = "Saved!";
     document.getElementById("scoresaver").disabled = true;
+    document.getElementById("scoresaver").classList.add("disabled");
 }
 

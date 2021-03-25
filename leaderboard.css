@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 :root {
-    --titlecol: #222222;
-    --bgcol: #4F646F;
-    --divcol: #B7ADCF;
-    --inputcol: #DEE7E7;
-    --buttoncol: #DEE7E7;
+    --titlecol: #FF9F1C;
+    --bgcol: #011627;
+    --text: #011627;
+    --divcol: #FF9F1C;
+    --inputtext: #FF9F1C;
+    --inputcol: #011627;
+    --buttontext: #011627;
+    --buttoncol: #FF9F1C;
+    --outerbuttoncol: #a6b5ce;
 }
-
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    color: var(--titlecol)
+    color: var(--text);
+    font-weight: 1000;
 }
 
 body{

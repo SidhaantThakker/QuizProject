@@ -23,6 +23,7 @@ const storeDetails = e => {
 
 function sortArrScore(){
 
+
     if(localStorage.getItem("scoreArray")){
         let arrScore = localStorage.getItem("scoreArray");
         for(let j = 0; j < arrScore.length - 1; j++){

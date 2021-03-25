@@ -2,11 +2,12 @@
 
 
 :root {
-    --titlecol: #222222;
-    --bgcol: #4F646F;
+    --titlecol: #FF9F1C;
+    --bgcol: #011627;
     --divcol: #B7ADCF;
     --inputcol: #DEE7E7;
-    --buttoncol: #DEE7E7;
+    --buttoncol: #FF9F1C;
+    --buttontextcol: #011627;
 }
 
 *{
@@ -32,12 +33,18 @@ body{
 
 button{
     background-color: var(--buttoncol);
+    color: var(--buttontextcol);
+    font-weight: 700;
     border-radius: 20px;
     border: none;
     height: 7.5vh;
     margin-top: 3vh;
     width: 15vw;
     font-size: 3vh;
+}
+
+.disabled{
+    background-color: #8a5811;
 }
 
 @media only screen and (max-width: 768px) and (orientation:portrait){

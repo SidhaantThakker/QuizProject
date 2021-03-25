@@ -2,12 +2,14 @@
 
 
 :root {
-    --titlecol: #222222;
-    --bgcol: #4F646F;
-    --divcol: #B7ADCF;
-    --inputcol: #DEE7E7;
-    --buttoncol: #DEE7E7;
-    --buttoncolalt: #a6b5ce;
+    --titlecol: #FF9F1C;
+    --bgcol: #011627;
+    --divcol: #FF9F1C;
+    --inputtext: #FF9F1C;
+    --inputcol: #011627;
+    --buttontext: #011627;
+    --innerbuttoncol: #d6881a;
+    --outerbuttoncol: #a6b5ce;
 }
 
   
@@ -67,6 +69,7 @@ input{
     font-size: 3vh;
     font-weight: 1000;
     text-align: center;
+    color: var(--inputtext);
     background-color: var(--inputcol);
     border: 0;
 }
@@ -75,10 +78,10 @@ button{
     margin: 3%;
     border: 3px solid rgba(0,0,0,0.1);
     border-radius: 10px;
-    color: var(--titlecol);
+    color: var(--buttontext);
     font-size: 2.5vh;
     font-weight: 1000;
-    background-color: var(--buttoncolalt);
+    background-color: var(--innerbuttoncol);
     height: 6vh;
     width: 10vw;
 }
