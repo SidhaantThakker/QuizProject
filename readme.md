@@ -9,3 +9,8 @@ The current app has the following features
 2. Randomized Questions picked from a bank
 3. Timer for every question
 4. Leaderboard that stores the Top 10 highscorers
+
+
+A video on how to use this app can be found here - https://drive.google.com/file/d/1rWIBhFbfAPoaqllxzMaFl7rL7gRKPr88/view?usp=sharing
+
+The app is hosted on the following URL - https://sidhaantthakker.com/QuizProject/index.html
